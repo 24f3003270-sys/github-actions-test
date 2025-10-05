@@ -1,0 +1,35 @@
+name: CI with Cache
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # Step that actually caches dependencies
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: cache-c7354d4
+
+      # Install dependencies (or use cached ones)
+      - name: Install dependencies
+        run: |
+          pip install requests pandas
+
+      # Step that prints whether the cache was hit or missed
+      - name: prime-cache-c7354d4
+        run: |
+          if [[ "${{ steps.cache.outputs.cache-hit }}" == "true" ]]; then
+            echo "Cache hit!"
+          else
+            echo "Cache miss!"
+          fi
