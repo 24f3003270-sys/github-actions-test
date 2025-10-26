@@ -1,1 +1,1 @@
-![CI](https://github.com/username/repo/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/24f3003270-sys/github-actions-test/blob/main/.github/workflows/ci.yml)
