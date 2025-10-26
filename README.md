@@ -1,1 +1,1 @@
-![CI](https://github.com/24f3003270-sys/github-actions-test/blob/main/.github/workflows/ci.yml)
+![CI]([![CI with Cache](https://github.com/24f3003270-sys/github-actions-test/actions/workflows/cache-deps.yml/badge.svg)](https://github.com/24f3003270-sys/github-actions-test/actions/workflows/cache-deps.yml))
